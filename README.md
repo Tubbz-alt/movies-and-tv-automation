@@ -7,8 +7,8 @@ Automatic downloading and management of TV and movies is a complicated business.
 # Media Managers
 Two popular media managers are:
 
-* Couch Potato (Manages Movies)
-* SickBeard (Manages TV)
+* Couch Potato (Manages Movies) ![CouchPotato](docs/images/cp.jpg "CouchPotato")
+* SickBeard (Manages TV) ![SickBeard](docs/images/sb.jpg "SickBeard")
 
 The media managers can be configured to look in a certain directory for new "completed" media.  Then they can post process, rename and move that media to the final destination.
 
@@ -17,8 +17,8 @@ The also search for new media and drop either .torrent or .nzb files into folder
 # Downloaders
 Two popular downloaders are:
 
-* SABnzdb (Uses USENET as the source)
-* Transmission (Uses Torrents as the source)
+* SABnzdb (Uses USENET as the source) ![SABnzdb](docs/images/sab.png "SABnzdb")
+* Transmission (Uses Torrents as the source) ![Transmission](docs/images/t.png "Transmission")
 
 # Couch Potato - Movies
 
@@ -75,7 +75,6 @@ export COUCHPOTATO_COMPLETE=$TRANSMISSION_MOVIES_COMPLETE
 
 export SICKBEARD_CONFIG=$BASE/sickbeard/config
 export SICKBEARD_DATA=$BASE/sickbeard/data
-export SICKBEARD_COMPLETE=$BASE/sickbeard/complete
 export SICKBEARD_NZB_DIR=$BASE/sickbeard/nzb
 export SICKBEARD_TORRENT_DIR=$BASE/sickbeard/torrent
 ```
@@ -176,7 +175,7 @@ Run this command to start the SickBeard service:
 docker run -d \
     -v $SICKBEARD_CONFIG:/config  \
     -v $SICKBEARD_DATA:/data \
-    -v $SICKBEARD_COMPLETE:/complete \
+    -v $SABNZDB_COMPLETE:/complete \
     -v $TV_LIBRARY_DIR:/tv \
     -p 8081:8081 --name sickbeard supercoder/sickbeard
 ```
@@ -187,6 +186,8 @@ Home | Add Shows, /tv
 Then run through all the shows you want to add.
 Config | Post-Processing
 TV Download Dir
+
+Then configure Sickbeard to use SABnzdb
 
 
 # Network Ports
