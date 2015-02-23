@@ -130,9 +130,24 @@ Run through the wizard.  After the wizard completes, you need to configure some 
 
 Hit Config | Folders
 Temporary Download Folder: /incomplete
-Complete Download Folder: /complate
+Complete Download Folder: /complete
 Watched folder: /watch
 Generate API Key
+
+#### SABnzdb Configuration Summary
+
+SABnzdb General - Generate an API key here as it will be used in the CouchPotato configuration
+
+![general](docs/images/sab-general.png "SABnzdb - General")
+
+SABnzdb Folders - Specify /complete, /incomplete and /watch
+
+![general](docs/images/sab-folders.png "SABnzdb - Folders")
+
+SABnzdb Servers - Specify you server(s) here.
+
+![general](docs/images/sab-servers.png "SABnzdb - Servers")
+
 
 ### Couch Potato
 
@@ -215,14 +230,28 @@ TV Download Dir
 
 Then configure Sickbeard to use SABnzdb
 
+#### SickBeard Configuration Summary
+
+SickBeard - General:  You can generate an API key here if needed.
+
+![general](docs/images/sb-general.png "SickBeard - General")
+
+SickBeard - Search Settings:  This is whre you connect SickBeard to SABnzdb.
+
+![search-settings](docs/images/sb-search-settings.png "SickBeard - Search Settings")
+
+SickBeard - Post Processing:  Specify the /complete folder
+
+![post-processing](docs/images/sb-post-processing.png "SickBeard - Post Processing")
+
 
 # Network Ports
 
-|Application | Default Port |
-|------------|-------|
-| Transmission-Deaemon | 9091 |
+|Application   | Default Port |
+|--------------|--------------|
+| Transmission | 9091         |
 | SABnzdb      | 8080, 9090?? |
-| Couch Potato | 5050 |
-| Sick Beard   | 8081 |
+| Couch Potato | 5050         |
+| Sick Beard   | 8081         |
 
 
