@@ -1,8 +1,12 @@
 # Overview
-Automatic downloading and management of TV and movies is a complicated business.  The complication is not the process itself, but figuring how to “wire up” all of the pieces can be challenging.  These components can be generalized into two categories:
+Automatic downloading and management of TV and movies is a complicated business.  The complication is not the process itself, but figuring how to “wire up” all of the pieces can be challenging.  This document will walk you through the necessary setup.
+
+The components we will be using can be generalized into two categories:
 
 * Media Managers
 * Downloaders
+
+We will also be using a technology called Docker. This requires that the setup be done on a modern Linux system.
 
 # Media Managers
 Two popular media managers are:
@@ -128,6 +132,7 @@ Hit Config | Folders
 Temporary Download Folder: /incomplete
 Complete Download Folder: /complate
 Watched folder: /watch
+Generate API Key
 
 ### Couch Potato
 
@@ -146,7 +151,6 @@ docker run -d  \
 Navigate to http://localhost:5050 or wherever the service has been started.
 
 You will be presented with the configuration wizard.
-Scroll down and fill out the sections:
 
 General/Basics/Username: media
 General/Basics/Password: <whatever you want>
@@ -166,6 +170,28 @@ When you are ready, hit the BIG green button.
 
 Navigate to settings
 Manage,  Movie Library Manager
+
+#### Couch Potato Configuration Summary
+
+This section is pretty "general":
+
+![general](docs/images/cp-general.png "CouchPotato - General")
+
+This is where you select where to search for media.  I just used the defaults in this example.
+
+![searcher](docs/images/cp-searcher.png "CouchPotato - Searcher")
+
+This is where the magic happens.  Configure CouchPotato to use SABnzdb that you previously setup.  You will need to generate an API key and use that name here.  The transmission parameters should be apparent.
+
+![downloaders](docs/images/cp-downloaders.png "CouchPotato - Downloaders")
+
+More magic here.  You must specify the /complete folder name in the "From" field and /movies in the "To" field.  These directories are mapped appropriately in the Docker image start script.
+
+![renamer](docs/images/cp-renamer.png "CouchPotato - Renamer")
+
+More magic here.  You must specify the /movies folder name in the "Movie Folder field.  This directory is mapped mapped appropriately in the Docker image start script.
+
+![manage](docs/images/cp-manage.png "CouchPotato - Manage")
 
 ### SickBeard
 
