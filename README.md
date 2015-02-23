@@ -93,6 +93,10 @@ Depending on permissions, you may have to "sudo" and then "chown" the folders.
 
 ## Fire up the Containers!!!!
 
+Here is the relationship from a directory perspective:
+
+![folder-connections](docs/images/folder-connections.png "folder-connections")
+
 ### Transmission
 
 For the torrent process to work, you need to forward an external port on your firewall to the Linux host running the docker container.
