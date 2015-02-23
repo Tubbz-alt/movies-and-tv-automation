@@ -86,7 +86,7 @@ export SICKBEARD_TORRENT_DIR=$BASE/sickbeard/torrent
 Next you can create all of these folders with this script:
 
 ```bash
-mkdir -p $BASE $TRANSMISSION_MOVIES_CONFIG $TRANSMISSION_MOVIES_INCOMPLETE $TRANSMISSION_MOVIES_COMPLETE $TRANSMISSION_MOVIES_WATCH $SABNZDB_CONFIG $SABNZDB_DATA $SABNZDB_INCOMPLETE $SABNZDB_COMPLETE $COUCHPOTATO_CONFIG $COUCHPOTATO_DATA $COUCHPOTATO_COMPLETE $SICKBEARD_CONFIG $SICKBEARD_DATA $SICKBEARD_COMPLETE $SICKBEARD_NZB_DIR $SICKBEARD_TORRENT_DIR
+mkdir -p $BASE $TRANSMISSION_MOVIES_CONFIG $TRANSMISSION_MOVIES_INCOMPLETE $TRANSMISSION_MOVIES_COMPLETE $TRANSMISSION_MOVIES_WATCH $SABNZDB_CONFIG $SABNZDB_DATA $SABNZDB_INCOMPLETE $SABNZDB_COMPLETE $COUCHPOTATO_CONFIG $COUCHPOTATO_DATA $COUCHPOTATO_COMPLETE $SICKBEARD_CONFIG $SICKBEARD_DATA $SICKBEARD_NZB_DIR $SICKBEARD_TORRENT_DIR
 ```
 
 Depending on permissions, you may have to "sudo" and then "chown" the folders.
@@ -132,11 +132,11 @@ Navigate to http://localhost:8080 or wherever the service has been started.
 
 Run through the wizard.  After the wizard completes, you need to configure some other settings.
 
-Hit Config | Folders
-Temporary Download Folder: /incomplete
-Complete Download Folder: /complete
-Watched folder: /watch
-Generate API Key
+* Config | Folders
+* Temporary Download Folder: /incomplete
+* Complete Download Folder: /complete
+* Watched folder: /watch
+* Generate API Key
 
 #### SABnzdb Configuration Summary
 
@@ -171,24 +171,19 @@ Navigate to http://localhost:5050 or wherever the service has been started.
 
 You will be presented with the configuration wizard.
 
-General/Basics/Username: media
-General/Basics/Password: <whatever you want>
-
-What download apps are you using?
-Uncheck Black Hole
-Check Transmission
-Enter Username/Password and Host
-Check Sabnzdb
-Enter host and the API key
-
-Add other torrent providers as necessary.
-
-Uncheck Newznab
-
-When you are ready, hit the BIG green button.
-
-Navigate to settings
-Manage,  Movie Library Manager
+* General/Basics/Username: media
+* General/Basics/Password: <whatever you want>
+* What download apps are you using?
+* Uncheck Black Hole
+* Check Transmission
+* Enter Username/Password and Host
+* Check Sabnzdb
+* Enter host and the API key
+* Add other torrent providers as necessary.
+* Uncheck Newznab
+* When you are ready, hit the BIG green button.
+* Navigate to settings
+* Manage,  Movie Library Manager (Add the /movies path)
 
 #### Couch Potato Configuration Summary
 
@@ -227,12 +222,11 @@ docker run -d \
 
 Navigate to http://localhost:8081 or wherever the service has been started.
 
-Home | Add Shows, /tv
-Then run through all the shows you want to add.
-Config | Post-Processing
-TV Download Dir
-
-Then configure Sickbeard to use SABnzdb
+* Home | Add Shows, /tv
+* Then run through all the shows you want to add.
+* Config | Post-Processing
+* TV Download Dir
+* Then configure Sickbeard to use SABnzdb
 
 #### SickBeard Configuration Summary
 
